@@ -1,9 +1,14 @@
+import DefaultTags from "../components/DefaultTags";
+
 export default function Head() {
   return (
     <>
-      <title></title>
-      <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/favicon.ico" />
+      <title>Ethereum Block Explorer</title>
+      <DefaultTags />
+      <meta
+        name="description"
+        content="explore the world of Ethereum, latest block, details of addresses, transactions..."
+      />
     </>
-  )
+  );
 }

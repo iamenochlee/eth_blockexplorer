@@ -1,4 +1,0 @@
-wagmi - connectkit //not needed
-
-alchemy sdk - fetching data
-ethers lib
