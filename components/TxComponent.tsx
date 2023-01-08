@@ -14,12 +14,12 @@ const TxComponent = ({ tx, i }: { tx: TransactionResponse; i: number }) => {
           {shorten(tx.hash, 6, 5)}
         </Link>
         <Link
-          className="w-[6.2rem] md:w-32 l:w-28 py-1.5 xl:text-base text-center text-[#5690fa] border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
+          className="w-[6.1rem] md:w-32 l:w-28 py-1.5 xl:text-base text-center text-[#5690fa] border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
           href={`/address/${tx.from}`}>
           {shorten(tx.from)}
         </Link>
         <Link
-          className="w-[6.2rem] md:w-32 xl:w-28 py-1.5  xl:text-base text-center text-[#5690fa] border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
+          className="w-[6.1rem] md:w-32 xl:w-28 py-1.5  xl:text-base text-center text-[#5690fa] border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
           href={`/address/${tx.to}`}>
           {tx.to ? shorten(tx.to) : 0x00}
         </Link>
