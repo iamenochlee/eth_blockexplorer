@@ -9,7 +9,7 @@ const TxComponent = ({ tx, i }: { tx: TransactionResponse; i: number }) => {
 
       <div className="flex mb-2 bg-[#1b1e25]">
         <Link
-          className="w-[7.12rem] md:w-40 xl:w-32 xl:text-base text-center py-1.5 text-[#5690fa]  border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
+          className="w-[7rem] md:w-40 xl:w-32 xl:text-base text-center py-1.5 text-[#5690fa]  border-[#0a0b0e] border-[1.5px] hover:bg-black hover:text-gray-400 hover:scale-[1.02] duration-100"
           href={`/tx/${tx.hash}`}>
           {shorten(tx.hash, 6, 5)}
         </Link>

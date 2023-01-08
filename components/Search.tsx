@@ -39,7 +39,9 @@ const Search = () => {
         onKeyDown={(e) => handleSearch(e)}
         placeholder="Search Transactions, Address...."
       />
-      <p className="text-red-500 absolute top-[5.5rem]">{error}</p>
+      <p className="text-red-500 text-[0.6rem] lg:text-sm absolute top-[5.5rem]">
+        {error}
+      </p>
     </>
   );
 };
