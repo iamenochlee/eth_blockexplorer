@@ -58,7 +58,7 @@ export default function Block({ block }: { block: BlockWithTransactions }) {
           <h4>To</h4>
         </div>
       </div>
-      <div className=" overflow-y-scroll scroll pr-2">
+      <div className=" overflow-y-scroll overflow-x-hidden scroll pr-2">
         <div className="xl:flex justify-between xl:justify-center px-[72px] pr-8 items-center absolute xl:top-0 xl:gap-24 hidden pt-[7px]"></div>
         {block.transactions.map((tx, i) => (
           <TxComponent key={tx.toString() + i} tx={tx} i={i} />
