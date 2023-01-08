@@ -39,7 +39,7 @@ const Search = () => {
         onKeyDown={(e) => handleSearch(e)}
         placeholder="Search Transactions, Address...."
       />
-      <p className="text-red-500">{error}.</p>
+      <p className="text-red-500">{error}</p>
     </>
   );
 };

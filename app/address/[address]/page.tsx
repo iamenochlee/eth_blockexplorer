@@ -27,7 +27,7 @@ export default async function AddressPage({
       <ul className="flex items-start xl:text-base flex-col xl:flex-row gap-3 xl:gap-5 mb-12">
         <li className="py-1.5 text-sm xl:text-lg">
           Address:{"  "}
-          <span className="bg-[#151922] py-1.5 text-[12.6px] xl:text-lg px-3 mt-3  block md:inline-block xl:mt-0">
+          <span className="bg-[#151922] py-1.5 text-[12px] xl:text-lg px-2 md:px-3 mt-3  block md:inline-block xl:mt-0">
             {" "}
             {address}
           </span>

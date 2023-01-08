@@ -8,7 +8,7 @@ interface BlockProps {
 
 const BlockBox = ({ icon, name, value }: BlockProps) => {
   return (
-    <div className="xl:bg-[#383838] xl:pl-2 xl:pr-3.5  xl:px-9 xl:py-5 py-2 flex gap-1 xl:gap-2">
+    <div className="xl:bg-[#383838] xl:pl-2 xl:pr-5  xl:px-9 xl:py-4 py-2 flex gap-1 xl:gap-2">
       <Image
         className="w-[48px] h-[48px] hidden xl:block"
         src={icon}
