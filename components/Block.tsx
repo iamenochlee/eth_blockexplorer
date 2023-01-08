@@ -21,7 +21,14 @@ export default function Block({ block }: { block: BlockWithTransactions }) {
           </li>
           <li>
             <span className="font-semibold capitalize">timestamp:</span>{" "}
-            {block.timestamp}
+            {new Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+              hour: "2-digit",
+              minute: "2-digit",
+              second: "2-digit",
+            }).format(block.timestamp * 1000)}
           </li>
           <li>
             <span className="font-semibold capitalize">parentHash: </span>
@@ -60,12 +67,3 @@ export default function Block({ block }: { block: BlockWithTransactions }) {
     </section>
   );
 }
-
-// new Intl.DateTimeFormat("en-US", {
-//   year: "numeric",
-//   month: "2-digit",
-//   day: "2-digit",
-//   hour: "2-digit",
-//   minute: "2-digit",
-//   second: "2-digit",
-// }).format(block?.timestamp)
