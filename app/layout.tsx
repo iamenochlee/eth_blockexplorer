@@ -2,7 +2,7 @@ import { Raleway } from "@next/font/google";
 import Search from "../components/Search";
 import "../styles/globals.css";
 
-const raleway = Raleway();
+const raleway = Raleway({ display: "swap" });
 
 export default function RootLayout({
   children,
