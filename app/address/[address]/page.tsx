@@ -24,7 +24,7 @@ export default async function AddressPage({
     <main className="pt-3 pb-12 max-w-full overflow-hidden">
       <GoHome />
       <h1 className="font-bold text-xl xl:text-2xl mb-5">Account Details</h1>
-      <ul className="flex items-start xl:text-base flex-col xl:flex-row gap-3 xl:gap-5 mb-12">
+      <ul className="flex items-center xl:text-base flex-col xl:flex-row gap-3 xl:gap-5 mb-12">
         <li className="py-1.5 text-sm xl:text-lg">
           Address:{"  "}
           <span className="bg-[#151922] py-1.5 text-[12px] xl:text-lg px-2 md:px-3 mt-3  block md:inline-block xl:mt-0">
@@ -33,7 +33,7 @@ export default async function AddressPage({
           </span>
         </li>
         {ens && (
-          <li className="bg-[#151922] py-[4.5px] text-[12px] xl:text-lg xl:px-4 text-center">
+          <li className="bg-[#151922] py-[4.5px] xl:py-[5.5px] text-[12px] xl:text-lg xl:px-4 text-center">
             {"  "}@{ens}
           </li>
         )}
@@ -50,7 +50,7 @@ export default async function AddressPage({
             {utils.formatEther(balance).toString().slice(0, 6)}{" "}
           </span>
         </li>
-        <li className="py-1.5 text-sm xl:text-lg xl:px-4">
+        <li className="py-1.5 xl:py-4 text-sm xl:text-lg xl:px-4">
           Total Transactions:{"  "}{" "}
           <span className="bg-[#151922] py-1 ml-2 xl:ml-0 xl:py-2 text-[12px] xl:text-lg px-2 xl:px-4">
             {txs.transfers.length}
