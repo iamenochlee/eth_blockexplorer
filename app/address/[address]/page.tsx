@@ -47,7 +47,7 @@ export default async function AddressPage({
               width={24}
               height={24}
             />
-            {utils.formatEther(balance).toString().slice(0, 6)}{" "}
+            {utils.formatEther(balance).toString().slice(0, 7)}{" "}
           </span>
         </li>
         <li className="py-1.5 xl:py-4 text-sm xl:text-lg xl:px-4">
