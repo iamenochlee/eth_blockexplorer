@@ -53,7 +53,7 @@ export default async function AddressPage({
         <li className="py-1.5 xl:py-4 text-sm xl:text-lg xl:px-4">
           Total Transactions:{"  "}{" "}
           <span className="bg-[#151922] py-1 ml-2 xl:ml-0 xl:py-2 text-[12px] xl:text-lg px-2 xl:px-4">
-            {txs.transfers.length}
+            {txs.transfers.length === 1000 ? "1000+" : txs.transfers.length}
           </span>
         </li>
       </ul>
@@ -80,15 +80,15 @@ export default async function AddressPage({
           <p>No Transactions</p>
         )}
         <div className="max-h-[75vh] overflow-y-scroll scroll pr-2">
-          {txs.transfers.map(
-            (tx: AssetTransfersWithMetadataResult, i: number) => (
+          {txs.transfers
+            .reverse()
+            .map((tx: AssetTransfersWithMetadataResult, i: number) => (
               <AccountTxComponent
                 key={tx.toString() + i}
                 tx={tx}
                 address={address}
               />
-            )
-          )}
+            ))}
         </div>
       </div>
     </main>
