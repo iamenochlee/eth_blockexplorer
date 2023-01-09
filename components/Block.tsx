@@ -5,13 +5,13 @@ import TxComponent from "./TxComponent";
 export default function Block({ block }: { block: BlockWithTransactions }) {
   return (
     <section className="flex flex-col xl:flex-row xl:h-96 max-h-[120vh] xl:relative overflow-hidden xl:px-12 py-9 xl:bg-[#151922] gap-5 justify-between relative">
-      <div className="text-[0.63rem] xl:text-sm">
+      <div className="text-[0.63rem] md:text-[13px] xl:text-sm">
         <h3 className="text-lg font-semibold mb-2"> Block #{block.number}</h3>
         <p className="mb-4 text-base">
           Block Transactions: {block.transactions.length}
         </p>
         <ul className="flex flex-col gap-1">
-          <li>
+          <li className="text-[8.6px] md:text-[13px] xl:text-sm">
             <span className="font-semibold capitalize">hash: </span>
             {block.hash}
           </li>

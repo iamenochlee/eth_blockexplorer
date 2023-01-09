@@ -15,8 +15,8 @@ export default async function Hashpage({ params }: any) {
       <h1 className="font-bold text-2xl mb-9">Transaction Details</h1>
       {tx ? (
         <div className="flex items-start justify-between">
-          <ul className="text-[11px] xl:text-base">
-            <li className="w-72 xl:w-auto overflow-hidden whitespace-nowrap text-ellipsis">
+          <ul className="text-[11px] md:text-[14px] xl:text-base">
+            <li className="w-72 md:w-auto overflow-hidden whitespace-nowrap text-ellipsis">
               <span className="font-bold capitalize">hash: </span>
               {tx?.transactionHash}
             </li>
@@ -74,7 +74,7 @@ export default async function Hashpage({ params }: any) {
                 {tx?.root}
               </li>
             )}
-            <li className="w-72 xl:w-auto overflow-hidden whitespace-nowrap text-ellipsis">
+            <li className="w-72 md:w-auto overflow-hidden whitespace-nowrap text-ellipsis">
               <span className="font-bold capitalize">blockHash: </span>
               {tx?.blockHash}
             </li>
@@ -86,7 +86,7 @@ export default async function Hashpage({ params }: any) {
             alt="eth"
             aria-hidden={true}
             priority={true}
-            className="hidden xl:block"
+            className="hidden lg:block"
           />
         </div>
       ) : (

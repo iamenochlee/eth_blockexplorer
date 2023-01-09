@@ -19,7 +19,7 @@ const BlockBox = ({ icon, name, value }: BlockProps) => {
         alt="icon"
       />
       <div className="text-center flex gap-2 xl:block">
-        <h2 className="uppercase font-bold xl:font-normal text-[13px] xl:text-lg text-bold">
+        <h2 className="uppercase font-bold xl:font-normal text-[13px] md:text-[15px] xl:text-lg text-bold">
           {name}
         </h2>
         <span className="xl:text-base">{value}</span>

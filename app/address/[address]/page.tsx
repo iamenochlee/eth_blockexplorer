@@ -7,7 +7,7 @@ import GoHome from "../../../components/GoHome";
 import ethSvg from "../../../public/assets/eth.svg";
 import "../../../styles/scroll.css";
 import useAlchemy from "../../../utils/hooks/useAlchemy";
-const lexend = Lexend_Deca();
+const lexend = Lexend_Deca({ display: "swap" });
 
 export default async function AddressPage({
   params,
@@ -24,8 +24,8 @@ export default async function AddressPage({
     <main className="pt-3 pb-12 max-w-full overflow-hidden">
       <GoHome />
       <h1 className="font-bold text-xl xl:text-2xl mb-5">Account Details</h1>
-      <ul className="flex items-center xl:text-base flex-col xl:flex-row gap-3 xl:gap-5 mb-12">
-        <li className="py-1.5 text-sm xl:text-lg">
+      <ul className="flex items-start lg:items-center xl:text-base flex-col xl:flex-row gap-3 xl:gap-5 mb-12">
+        <li className={`${lexend.className} py-1.5 text-sm xl:text-lg`}>
           Address:{"  "}
           <span className="bg-[#151922] py-1.5 text-[12px] xl:text-lg px-2 md:px-3 mt-3  block md:inline-block xl:mt-0">
             {" "}
@@ -38,7 +38,9 @@ export default async function AddressPage({
           </li>
         )}
         <li className=" text-lg py-1.5 xl:px-4 items-center flex gap-2">
-          <p className="text-sm xl:text-lg">ETH Balance: </p>
+          <p className={`${lexend.className} text-sm xl:text-lg`}>
+            ETH Balance:{" "}
+          </p>
           <span className="bg-[#151922] py-[2px] xl:py-[4.5px] text-[12px] xl:text-lg px-2 xl:px-4 ml-2 xl:ml-0  flex gap-1 items-center">
             <Image
               alt="eth"
@@ -51,7 +53,8 @@ export default async function AddressPage({
             {utils.formatEther(balance).toString().slice(0, 7)}{" "}
           </span>
         </li>
-        <li className="py-1.5 xl:py-4 text-sm xl:text-lg xl:px-4">
+        <li
+          className={` ${lexend.className} py-1.5 xl:py-4 text-sm xl:text-lg xl:px-4`}>
           Total Transactions:{"  "}{" "}
           <span className="bg-[#151922] py-1 ml-2 xl:ml-0 xl:py-2 text-[12px] xl:text-lg px-2 xl:px-4">
             {txs.transfers.length === 1000 ? "1000+" : txs.transfers.length}
@@ -60,12 +63,13 @@ export default async function AddressPage({
       </ul>
 
       <div className="">
-        <h2 className="mb-6 font-semibold xl:text-xl text-base">
+        <h2
+          className={`${lexend.className} mb-6 font-semibold xl:text-xl text-base`}>
           Recent Transactions
         </h2>
         {txs.transfers.length ? (
           <div
-            className={`flex items-center gap-5 md:pl-1 pl-0 lg:pl-0 md:gap-32 xl:gap-5 text-[13px] font-normal mb-2 xl:text-base xl:font-semibold ${lexend.className}}`}>
+            className={`flex items-center gap-5 md:pl-1 pl-0 lg:pl-0 md:gap-32 lg:gap-[11.2rem] xl:gap-5 text-[13px] font-normal mb-2 xl:text-base xl:font-semibold ${lexend.className}}`}>
             <h4 className={`w-20 ${lexend.className} hidden xl:block `}>
               Type
             </h4>

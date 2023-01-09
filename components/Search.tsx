@@ -26,7 +26,7 @@ const Search = () => {
   return (
     <>
       <input
-        className="w-72 focus:w-[18.5rem] relative xl:w-96 h-9 xl:h-12 px-3 text-sm xl:text-base xl:px-4 xl:py-2 text-white bg-[#151922] xl:focus:w-[26rem] ease-out duration-100"
+        className="w-72 focus:w-[18.56rem] relative xl:w-96 h-9 xl:h-12 px-3 text-sm xl:text-base xl:px-4 xl:py-2 text-white bg-[#151922] xl:focus:w-[26rem] ease-out duration-[150ms]"
         type="text"
         value={query}
         onChange={(e) => {
