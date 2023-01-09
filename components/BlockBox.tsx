@@ -15,6 +15,7 @@ const BlockBox = ({ icon, name, value }: BlockProps) => {
         width={48}
         height={48}
         aria-hidden={true}
+        priority={true}
         alt="icon"
       />
       <div className="text-center flex gap-2 xl:block">

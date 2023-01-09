@@ -44,6 +44,7 @@ export default async function AddressPage({
               alt="eth"
               aria-hidden={true}
               src={ethSvg}
+              priority={true}
               width={24}
               height={24}
             />

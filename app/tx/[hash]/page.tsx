@@ -84,6 +84,8 @@ export default async function Hashpage({ params }: any) {
             width={250}
             height={300}
             alt="eth"
+            aria-hidden={true}
+            priority={true}
             className="hidden xl:block"
           />
         </div>
