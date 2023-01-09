@@ -11,7 +11,7 @@ const Search = () => {
   function handleSearch(e: any) {
     if (e.key === "Enter") {
       if (query.length === 66) {
-        router.push(`/tx/${query}`);
+        router.push(`/tx/${query}`, { forceOptimisticNavigation: true });
         setQuery("");
         setError("");
       } else if (query.length === 42) {
@@ -36,10 +36,12 @@ const Search = () => {
             setError("");
           }
         }}
-        onKeyDown={(e) => handleSearch(e)}
+        onKeyDown={(e) => {
+          handleSearch(e);
+        }}
         placeholder="Search Transactions, Address...."
       />
-      <p className="text-red-500 text-[0.6rem] lg:text-sm absolute top-[5.5rem]">
+      <p className="text-red-500 text-[0.6rem] lg:text-sm absolute top-[5.6rem]">
         {error}
       </p>
     </>
