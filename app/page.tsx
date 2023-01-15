@@ -45,7 +45,8 @@ async function getHomePageDetails(alchemy: Alchemy) {
   let ethPrice: IethPrice;
   try {
     const res = await fetch(
-      "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
+      "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
+      { cache: "no-store" }
     );
     ethPrice = await res.json();
   } catch (error: any) {
