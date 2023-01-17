@@ -53,16 +53,16 @@ export default function Block({ block }: { block: BlockWithTransactions }) {
         </ul>
         <h2 className="xl:hidden mt-8 font-bold text-lg">Transactions</h2>
         <div className="flex xl:hidden gap-24 md:gap-36 mt-3 -mb-4">
-          <h4>Hash</h4>
-          <h4>From</h4>
-          <h4>To</h4>
+          <h3>Hash</h3>
+          <h3>From</h3>
+          <h3>To</h3>{" "}
         </div>
       </div>
       <div className=" overflow-y-scroll overflow-x-hidden scroll pr-2">
         <div className="hidden xl:flex gap-24 pr-16 pl-12 mt-3 -mb-4 absolute top-[3px]">
-          <h4>Hash</h4>
-          <h4>From</h4>
-          <h4>To</h4>
+          <h3>Hash</h3>
+          <h3>From</h3>
+          <h3>To</h3>{" "}
         </div>
         <div className="xl:flex justify-between xl:justify-center px-[72px] pr-8 items-center absolute xl:top-0 xl:gap-24 hidden pt-[7px]"></div>
         {block.transactions.map((tx, i) => (
