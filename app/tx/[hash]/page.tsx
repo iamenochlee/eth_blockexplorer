@@ -10,7 +10,9 @@ export default async function Hashpage({ params }: any) {
   const tx = await getTransactionDetails(alchemy, params.hash);
 
   return (
-    <main className="pt-6">
+    <div
+      aria-labelledby="Transaction Hash Details"
+      className="pt-6 mb-[5rem] xl:mb-15">
       <GoHome />
       <h1 className="font-bold text-2xl mb-9">Transaction Details</h1>
       {tx ? (
@@ -92,7 +94,7 @@ export default async function Hashpage({ params }: any) {
       ) : (
         <p>Transaction Not Found</p>
       )}
-    </main>
+    </div>
   );
 }
 
