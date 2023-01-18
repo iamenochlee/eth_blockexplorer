@@ -33,15 +33,15 @@ export default async function AddressPage({
           </span>
         </li>
         {ens && (
-          <li className="bg-[#151922] py-[4.5px] xl:py-[5.5px] text-[12px] xl:text-lg xl:px-4 text-center">
+          <li className="bg-[#151922] py-[4.5px] px-3 xl:py-[5.5px] text-[12px] xl:text-lg xl:px-4 text-center">
             {"  "}@{ens}
           </li>
         )}
-        <li className=" text-lg py-1.5 xl:px-4 items-center flex gap-2">
+        <li className=" text-lg py-1.5  xl:px-4 items-center flex gap-2">
           <p className={`${lexend.className} text-sm xl:text-lg`}>
             ETH Balance:{" "}
           </p>
-          <span className="bg-[#151922] py-[2px] xl:py-[4.5px] text-[12px] xl:text-lg px-2 xl:px-4 ml-2 xl:ml-0  flex gap-1 items-center">
+          <span className="bg-[#151922] sm:pr-3 py-[2px] xl:py-[4.5px] text-[12px] xl:text-lg px-2 xl:px-4 ml-2 xl:ml-0  flex gap-1 items-center">
             <Image
               alt="eth"
               aria-hidden={true}
